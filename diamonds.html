@@ -12,7 +12,7 @@
 *{margin:0; padding:0; border:none}
 .maincontent{padding-top:1em}
 li{list-style-type:none}
-.maincontent section{font-family: 'playing_cardsregular';}
+.maincontent section{font-family: 'playing_cardsregular'; position:relative}
 .maincontent section h2,.maincontent section h3,.maincontent section h2 b,.maincontent section li b{font-family:Arial, sans-serif;}
 .maincontent section h2,.maincontent section h3{text-align:center; margin-bottom:.35em}
 .maincontent section li{text-align:center; margin-bottom:.5em}
@@ -20,7 +20,9 @@ li{list-style-type:none}
 
 
 .diamond-ace{}
-.card{margin:1em auto; font-size:180px}
+.card{margin:1em auto; font-size:180px; height:220px; text-align:center; border:2px inset #999; width:180px; position:relative}
+.card:before{top:0; left:0; position:absolute; height:180px; width:180px; z-index:10; background-color:#000}
+.diamond-ace:after{content: "A"; outline:3px double #000}
 </style>
   </head>
   <body class="playing-cards">
@@ -58,6 +60,8 @@ li{list-style-type:none}
               <div class="card">K</div>
               <div class="card">L</div>
               <div class="card">M</div>
+              <h3>Generated Content Deck</h3>
+              <div class="card diamond-ace">A</div>
             </section>
       </div>
     </div>
